@@ -1,4 +1,4 @@
-# News Service (Java + Spring Boot + DynamoDB)
+# News Scraping Service (Java + Spring Boot + DynamoDB)
 
 A small Spring Boot service to load news JSON files into DynamoDB and expose endpoints for category, source, score, search, and nearby queries. Articles are enriched with LLM-generated summaries.
 
