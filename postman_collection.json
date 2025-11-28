@@ -1,12 +1,13 @@
 {
   "info": {
-    "_postman_id": "news-service-sample",
-    "name": "News Service",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    "_postman_id": "0f343744-107f-433f-9771-5296e143bad9",
+    "name": "News Scraping Service",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "29960857"
   },
   "item": [
     {
-      "name": "Category",
+      "name": "Fetch News Articles by Category",
       "request": {
         "method": "GET",
         "header": [],
@@ -34,10 +35,11 @@
             }
           ]
         }
-      }
+      },
+      "response": []
     },
     {
-      "name": "Search",
+      "name": "Search News Articles",
       "request": {
         "method": "GET",
         "header": [],
@@ -65,15 +67,16 @@
             }
           ]
         }
-      }
+      },
+      "response": []
     },
     {
-      "name": "Nearby",
+      "name": "Fetch News Articles Nearby",
       "request": {
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:8080/api/v1/news/nearby?lat=21.754075&lon=80.560129&radiusKm=50&limit=5",
+          "raw": "http://localhost:8080/api/v1/news/nearby",
           "protocol": "http",
           "host": [
             "localhost"
@@ -86,7 +89,78 @@
             "nearby"
           ]
         }
-      }
+      },
+      "response": []
+    },
+    {
+      "name": "Fetch News Articles By Source",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/news/v1/source?source=DW&limit=5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "news",
+            "v1",
+            "source"
+          ],
+          "query": [
+            {
+              "key": "source",
+              "value": "DW"
+            },
+            {
+              "key": "limit",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Fetch News Articles By Min Score",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/news/v1/score?minScore=0&limit=5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "news",
+            "v1",
+            "score"
+          ],
+          "query": [
+            {
+              "key": "minScore",
+              "value": "0"
+            },
+            {
+              "key": "limit",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": []
     }
   ]
 }
