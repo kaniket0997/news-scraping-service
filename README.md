@@ -60,6 +60,5 @@ curl "http://localhost:8080/api/news/v1/nearby?lat=21.754075&lon=80.560129&radiu
 ```
 
 ## Notes
-- For the interview, scans are used for simplicity. For production, create GSIs for category/source/time and use OpenSearch for full-text search.
 - Summaries from the LLM are cached back into DynamoDB to reduce cost.
 
