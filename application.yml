@@ -1,0 +1,9 @@
+aws:
+  region: us-east-1
+  dynamodb:
+    endpoint: http://localhost:8000
+
+llm:
+  openai:
+    apiUrl: https://api.openai.com/v1/chat/completions
+    model: gpt-4o-mini
